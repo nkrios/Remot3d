@@ -4,6 +4,7 @@
 
 [![Version](https://img.shields.io/badge/Remot3d-v.1.4-brightgreen.svg?maxAge=259200)]()
 [![Version](https://img.shields.io/badge/Codename-Wanted-red.svg?maxAge=259200)]()
+[![HitCount](http://hits.dwyl.io/KeepWannabe/Remot3d.svg)](http://hits.dwyl.io/KeepWannabe/Remot3d)
 [![Stage](https://img.shields.io/badge/Release-Stable-brightgreen.svg)]()
 [![Build](https://img.shields.io/badge/Supported_OS-Linux-orange.svg)]()
 
