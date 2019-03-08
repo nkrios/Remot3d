@@ -35,8 +35,8 @@ blue="\033[1;34m"                                           ##
 nc="\e[0m"                                                  ##
 ##############################################################
 checking_installation() {
-payloads_folder=$(ls $HOME | grep ".rmtd-payloads")
-if [[ $payloads_folder == "rmtd-payloads" ]];then
+payloads_folder=$(ls -a $HOME | grep ".rmtd-payloads")
+if [[ $payloads_folder == ".rmtd-payloads" ]];then
 clear
 printf "\e[8;27;93t"
 spinlong
