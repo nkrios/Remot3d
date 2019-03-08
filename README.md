@@ -18,12 +18,10 @@
 Written in Shell Script Language or commonly known as BASH by a 16 year old teenager.
 ### Donate
 - If this project very help you to penetration testing  and u want support me , you can give me a cup of coffee :)
+## ----------------------------------------------------------------------
 
 # Screenshots
-<img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/1.png" width="55%"></img>
-# ---------------------------------------------------------------
-
-<img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/2.png" width="32%"></img> <img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/3.png" width="32%"></img>
+<img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/1.png" width="25%"></img> <img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/2.png" width="25%"></img> <img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/3.png" width="25%"></img> <img src="https://raw.githubusercontent.com/keepwannabe/Remot3d/master/screenshot/4.png" width="25%"></img>
 
 # List of Remot3d Functions
 
@@ -41,7 +39,7 @@ Written in Shell Script Language or commonly known as BASH by a 16 year old teen
 ## Getting Started
 1. ```git clone https://github.com/KeepWannabe/Remot3d```
 2. ```cd Remot3d```
-3. ```chmod +x Remot3d.sh && ./Remot3d.sh```
+3. ```sudo setup.sh && Remot3d```
 
 
 ## Linux operating systems we recommend :
@@ -56,7 +54,7 @@ Written in Shell Script Language or commonly known as BASH by a 16 year old teen
 
 ## Update Remot3d
 - To update remot3d go to your Remot3d folder and execute :
-```git pull && chmod +x Remot3d.sh && ./Remot3d.sh```
+```git pull && sudo setup.sh && Remot3d```
 
 
 ## Helped by : 
