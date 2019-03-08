@@ -2,18 +2,20 @@
 # Remot3d - An Easy Way To Exploiting 
 #### Will be update soon
 
-[![Version](https://img.shields.io/badge/Remot3d-v.1.4-brightgreen.svg?maxAge=259200)]()
-[![Version](https://img.shields.io/badge/Codename-The-Baby-red.svg?maxAge=259200)]()
+[![Version](https://img.shields.io/badge/Version-2.0-brightgreen.svg?maxAge=259200)]()
+[![Build](https://img.shields.io/badge/Codename_-_The_Baby-red.svg?maxAge=259200)]()
 [![HitCount](http://hits.dwyl.io/KeepWannabe/Remot3d.svg)](http://hits.dwyl.io/KeepWannabe/Remot3d)
-[![Stage](https://img.shields.io/badge/Release-Stable-brightgreen.svg)]()
+[![Stage](https://img.shields.io/badge/Release-Stable-yellow.svg)]()
 [![Build](https://img.shields.io/badge/Supported_OS-Linux-red.svg)]()
 
-<img align="left" width="120" height="120" src="https://avatars3.githubusercontent.com/u/31374361?s=460&v=4">
+<img align="center" src="https://raw.githubusercontent.com/KeepWannabe/Remot3d/master/screenshot/remoted-logo-LONG.png">
 
-It's easy to create a backdoor in an instant, the backdoor can be used in a remote process via a Linux terminal on the server that runs the PHP Language program.
+## __________________________________________________________________
 
-Made to bypass the system that is disabled on the server, especially for reading sensitive files that are ```/etc/passwd```
+***Remot3d*** - A tool made to generate backdoor to control and exploit a server where the server runs the PHP (Hypertext Preprocessor) program.
 
+                Equipped with a backdoor that has been Obfuscated which means that 100% FUD (FULLY UNDETECTABLE) in other words can penetrate the firewall of a server because of its ignorance if it's a Malware,
+Written in Shell Script Language or commonly known as BASH by a 16 year old teenager.
 ### Donate
 - If this project very help you to penetration testing  and u want support me , you can give me a cup of coffee :)
 
@@ -57,15 +59,17 @@ Made to bypass the system that is disabled on the server, especially for reading
 ```git pull && chmod +x Remot3d.sh && ./Remot3d.sh```
 
 
-## Credits
+## Helped by : 
 
-### - Thanks to my god Allah
-### >_ Bayu Fedra
-### >_ Novran Fathir (a.k.a ZombieRoot)
-### >_ Ardhana Resky (https://github.com/Ardzz)
-### >_ Agus Setya R (a.k.a L0c4lh34rtz)
-### >_ Edo -maland- (https://github.com/ScreetSec) < For always inspiring me !
-### >_ IndoXploit - ZeroByte.ID - Eldersc0de Family and Much more !
+### - my god Allah SWT.
+### - Bayu Fedra      (https://github.com/bayufedra)
+### - Ardhana Reky    (https://github.com/ardzz)
+### - Novran Fathir   (https://github.com/panophan)
+### - Ardhana Resky   (https://github.com/Ardzz)
+### - Hasanal Bulkiah (https://github.com/florienzh4x)
+### - Agus Setya R    (https://github.com/agussetyar)
+### - Edo Maland      (https://github.com/ScreetSec)
+### - IndoXploit - ZeroByte.ID - Eldersc0de Family and Much more !
 
 
 ## Found a Bug ?
